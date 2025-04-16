@@ -2,6 +2,9 @@
 
 @theme {
 	--font-serif: 'Inter', sans-serif;
+
+	--color-brand-blue: #102A27;
+	--color-brand-brown: #53340C;
 }
 
 @layer base {
