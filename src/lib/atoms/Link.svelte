@@ -18,7 +18,12 @@
 	} = $props();
 </script>
 
-<a {href} {target} {rel} class={['group inline-flex align-middle', restProps.class]}>
+<a
+	{href}
+	{target}
+	{rel}
+	class={['group inline-flex items-center align-middle select-none', restProps.class]}
+>
 	{#if children}
 		<span class="actionLink text-md w-fit px-8 font-medium">{@render children?.()}</span>
 	{/if}
