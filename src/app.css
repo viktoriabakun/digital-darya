@@ -10,11 +10,15 @@
 
 @layer base {
 	html {
-		@apply font-serif;
+		@apply font-serif scroll-smooth;
 	}
 }
 
 @utility actionLink {
 	@apply inline-flex h-[52px] w-[52px] items-center justify-center shrink-0 rounded-full bg-white p-4
 	transition-colors group-hover:bg-white/60 group-active:bg-white/10 group-active:text-white;
+}
+
+@utility navLinkDot {
+	@apply before:content-[''] before:flex before:items-center before:mr-2 before:rounded-full before:size-2 before:bg-transparent [&[aria-current='page']]:before:bg-white/80;
 }
