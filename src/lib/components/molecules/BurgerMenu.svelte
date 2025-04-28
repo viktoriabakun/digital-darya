@@ -51,7 +51,7 @@
 		>
 			<Navigation />
 
-			<SocialLinks />
+			<SocialLinks class="ml-3" />
 		</div>
 	</div>
 </div>

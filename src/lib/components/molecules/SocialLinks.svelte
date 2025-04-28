@@ -3,9 +3,11 @@
 	import DribbleIcon from '$lib/components/icons/DribbleIcon.svelte';
 	import TelegramIcon from '$lib/components/icons/TelegramIcon.svelte';
 	import Link from '$lib/components/atoms/Link.svelte';
+
+	let { class: className = '' } = $props();
 </script>
 
-<div class="flex items-center gap-5">
+<div class={['flex items-center gap-5', className]}>
 	<Link href="https://example.com">
 		<span class="actionLink size-11 p-[11px]"><DribbleIcon /></span>
 	</Link>
