@@ -16,7 +16,7 @@
 
 <span
 	class={[
-		'inline-flex h-fit w-fit shrink-0 items-center justify-center rounded-3xl p-4 text-lg font-medium backdrop-blur-2xl select-none',
+		'inline-flex h-fit w-fit shrink-0 items-center justify-center rounded-3xl px-4 py-3 text-lg font-medium backdrop-blur-2xl select-none lg:p-4',
 		colorVariants[color],
 		restProps.class
 	]}
