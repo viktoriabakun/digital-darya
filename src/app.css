@@ -6,6 +6,7 @@
 
 	--color-brand-blue: #102a27;
 	--color-brand-brown: #53340c;
+	--color-neutral-black: #020504;
 }
 
 @layer base {
@@ -19,6 +20,6 @@
 	transition-colors group-hover:bg-white/60 group-active:bg-white/10 group-active:text-white;
 }
 
-@utility navLinkDot {
+@utility navLink {
 	@apply before:content-[''] before:flex before:items-center before:mr-2 before:rounded-full before:size-2 before:bg-transparent [&[aria-current='page']]:before:bg-white/80;
 }

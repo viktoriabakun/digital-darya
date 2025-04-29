@@ -1,15 +1,11 @@
 <script>
 	import Navigation from '$lib/components/molecules/Navigation.svelte';
 	import SocialLinks from '$lib/components/molecules/SocialLinks.svelte';
-
-	let open = $state(false);
-
-	function toggleBurgerMenu() {
-		open = !open;
-	}
+	import { isBurgerMenuOpen as open, toggleBurgerMenu } from '$lib/stores/burger-menu.svelte';
+	import { lg } from '$lib/utils/media-query.svelte.js';
 
 	$effect(() => {
-		if (open) {
+		if ($open) {
 			document.body.style.overflow = 'hidden';
 		} else {
 			document.body.style.overflow = '';
@@ -19,12 +15,18 @@
 			document.body.style.overflow = '';
 		};
 	});
+
+	$effect(() => {
+		if (lg.current) {
+			open.set(false);
+		}
+	});
 </script>
 
 <div class="block lg:hidden">
 	<button
 		onclick={toggleBurgerMenu}
-		class={['burger relative z-15', { open }]}
+		class={['burger relative z-15', { $open }]}
 		type="button"
 		aria-label="Toggle navigation menu"
 	>
@@ -38,13 +40,13 @@
 	<div
 		class={[
 			'absolute top-0 right-0 z-5 origin-top-right transition-transform duration-300 ease-in-out',
-			open ? 'scale-100' : 'scale-0'
+			$open ? 'scale-100' : 'scale-0'
 		]}
 	>
 		<div
 			aria-hidden="true"
 			onclick={toggleBurgerMenu}
-			class={['z-0 h-screen w-screen', open && 'blur-animation']}
+			class={['z-0 h-screen w-screen', $open && 'blur-animation']}
 		></div>
 		<div
 			class="bg-brand-blue absolute top-0 right-0 z-10 flex h-auto w-full flex-col gap-24 px-5 pt-24 pb-10 lg:p-0"
@@ -82,6 +84,7 @@
 	.burger-top-line,
 	.burger-middle-line,
 	.burger-bottom-line {
+		opacity: 1;
 		display: inline-block;
 		height: 2px;
 		background-color: white;

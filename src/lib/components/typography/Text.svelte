@@ -4,12 +4,20 @@
 	/** @type {{
 	 * tag?: TextHtmlElement | string,
 	 * size?: 'display-2xl' | 'display-md' | 'xl' | 'lg' | 'md',
+	 * color?: 'dark' | 'light',
 	 * weight?: 'regular' | 'medium' | 'semibold' | 'bold',
 	 * children: () => any,
 	 * class?: string,
 	 * }} */
 
-	let { tag = 'p', size = 'md', weight = 'regular', children, ...restProps } = $props();
+	let {
+		tag = 'p',
+		size = 'md',
+		color = 'dark',
+		weight = 'regular',
+		children,
+		...restProps
+	} = $props();
 
 	const sizeClasses = {
 		'display-2xl': 'text-[72px] leading-tight',
@@ -17,6 +25,11 @@
 		xl: 'text-[20px] leading-relaxed',
 		lg: 'text-[18px] leading-relaxed',
 		md: 'text-[16px] leading-relaxed'
+	};
+
+	const colorClasses = {
+		dark: 'text-neutral-black',
+		light: 'text-white'
 	};
 
 	const weightClasses = {
@@ -27,6 +40,9 @@
 	};
 </script>
 
-<svelte:element this={tag} class={[sizeClasses[size], weightClasses[weight], restProps.class]}>
+<svelte:element
+	this={tag}
+	class={[sizeClasses[size], weightClasses[weight], colorClasses[color], restProps.class]}
+>
 	{@render children()}
 </svelte:element>

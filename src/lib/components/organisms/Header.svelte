@@ -7,7 +7,7 @@
 	import ArrowUpRightIcon from '$lib/components/icons/ArrowUpRightIcon.svelte';
 </script>
 
-<header class="flex items-center justify-between px-[30px] py-9">
+<header class="sticky top-0 flex w-full items-center justify-between bg-pink-300/80 px-[30px] py-9">
 	<Logo class="relative z-15 flex h-9 w-[165px] shrink-0 lg:h-12 lg:w-[208px]" />
 
 	{#if lg.current}
