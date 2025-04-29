@@ -26,7 +26,7 @@
 <div class="block lg:hidden">
 	<button
 		onclick={toggleBurgerMenu}
-		class={['burger relative z-15', { $open }]}
+		class={['burger relative z-15', { open: $open }]}
 		type="button"
 		aria-label="Toggle navigation menu"
 	>
@@ -84,6 +84,7 @@
 	.burger-top-line,
 	.burger-middle-line,
 	.burger-bottom-line {
+		width: 100%;
 		opacity: 1;
 		display: inline-block;
 		height: 2px;
