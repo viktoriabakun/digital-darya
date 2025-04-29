@@ -8,7 +8,7 @@
 
 <a
 	href={target}
-	class="navLinkDot text-md flex items-center py-2 pr-3 pl-[30px] text-white/40 transition-colors duration-400 hover:text-white [&[aria-current='page']]:text-white/80"
+	class="navLinkDot text-md flex items-center px-3 py-2 text-white/40 transition-colors duration-400 hover:text-white [&[aria-current='page']]:text-white/80"
 	aria-current={page.url.hash === target ? 'page' : undefined}
 >
 	{title}

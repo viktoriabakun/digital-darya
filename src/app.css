@@ -15,7 +15,7 @@
 }
 
 @utility actionLink {
-	@apply inline-flex h-[52px] w-[52px] items-center justify-center shrink-0 rounded-full bg-white p-4
+	@apply inline-flex min-w-fit items-center justify-center size-[52px] p-4 shrink-0 rounded-full bg-white
 	transition-colors group-hover:bg-white/60 group-active:bg-white/10 group-active:text-white;
 }
 

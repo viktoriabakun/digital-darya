@@ -1,5 +1,4 @@
 <script>
-	/** @typedef {{ class?: string }} */
 	/** @type {{ class?: string }} */
 	let { class: className = '' } = $props();
 </script>
