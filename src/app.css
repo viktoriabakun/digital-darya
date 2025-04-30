@@ -19,7 +19,3 @@
 	@apply inline-flex min-w-fit items-center justify-center size-[52px] p-4 shrink-0 rounded-full bg-white
 	transition-colors group-hover:bg-white/60 group-active:bg-white/10 group-active:text-white;
 }
-
-@utility navLink {
-	@apply before:content-[''] before:flex before:items-center before:mr-2 before:rounded-full before:size-2 before:bg-transparent [&[aria-current='page']]:before:bg-white/80;
-}

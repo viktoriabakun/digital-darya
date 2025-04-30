@@ -2,22 +2,39 @@
 	import NavLink from '$lib/components/atoms/NavLink.svelte';
 	import { onMount } from 'svelte';
 	import { lg } from '$lib/utils/media-query.svelte.js';
+	import { pushState } from '$app/navigation';
+
+	const navLinks = [
+		{ title: 'Home', target: '#home' },
+		{ title: 'About', target: '#about' },
+		{ title: 'Skills', target: '#skills' },
+		{ title: 'Works', target: '#works' },
+		{ title: 'Contact', target: '#contact' }
+	];
+
+	let activeNavLink = $state('');
 
 	onMount(() => {
-		const sections = Array.from(document.querySelectorAll('section[id]'));
-		const navLinks = Array.from(document.querySelectorAll('.navLink'));
+		if (history.scrollRestoration) {
+			history.scrollRestoration = 'manual';
+		}
+
+		activeNavLink = location.hash.length ? location.hash : '#home';
+		const activeSection = document.getElementById(activeNavLink.slice(1));
+
+		if (activeSection) {
+			activeSection.scrollIntoView({ behavior: 'smooth' });
+		}
 
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						const id = entry.target.getAttribute('id');
-						if (id && location.hash !== `#${id}`) {
-							history.replaceState(null, '', `#${id}`);
-							navLinks.forEach((link) => link.removeAttribute('aria-current'));
-							navLinks
-								.find((link) => link.getAttribute('href') === `#${id}`)
-								?.setAttribute('aria-current', 'page');
+
+						activeNavLink = `#${id}`;
+						if (window.location.hash !== `#${id}`) {
+							pushState(`#${id}`, {});
 						}
 					}
 				});
@@ -27,6 +44,7 @@
 			}
 		);
 
+		const sections = Array.from(document.querySelectorAll('section[id]'));
 		sections.forEach((section) => observer.observe(section));
 
 		return () => {
@@ -36,9 +54,7 @@
 </script>
 
 <nav class="flex w-2/3 flex-col gap-3 lg:w-auto lg:flex-row lg:gap-2">
-	<NavLink title="Home" target="#home" />
-	<NavLink title="About" target="#about" />
-	<NavLink title="Skills" target="#skills" />
-	<NavLink title="Works" target="#works" />
-	<NavLink title="Contact" target="#contact" />
+	{#each navLinks as { title, target } (target)}
+		<NavLink {title} {target} isActive={activeNavLink === target} />
+	{/each}
 </nav>
