@@ -7,14 +7,16 @@
 	import ArrowUpRightIcon from '$lib/components/icons/ArrowUpRightIcon.svelte';
 </script>
 
-<header class="sticky top-0 flex w-full items-center justify-between bg-pink-300/80 px-[30px] py-9">
+<header
+	class="bg-brand-blue sticky top-[50px] flex w-full items-center justify-between rounded-[var(--rounded-brand)] px-5 py-5 lg:top-[30px] lg:px-9 lg:py-[30px]"
+>
 	<Logo class="relative z-15 flex h-9 w-[165px] shrink-0 lg:h-12 lg:w-[208px]" />
 
 	{#if lg.current}
 		<Navigation />
 		<Link href="https://example.com">
-			<span class="actionLink px-8">Hire</span>
-			<span class="actionLink"><ArrowUpRightIcon /></span>
+			<span class="action-link px-8">Hire</span>
+			<span class="action-link"><ArrowUpRightIcon /></span>
 		</Link>
 	{/if}
 

@@ -49,7 +49,7 @@
 			class={['z-0 h-screen w-screen', $open && 'blur-animation']}
 		></div>
 		<div
-			class="bg-brand-blue absolute top-0 right-0 z-10 flex h-auto w-full flex-col gap-24 px-5 pt-24 pb-10 lg:p-0"
+			class="bg-brand-blue absolute top-0 right-0 z-10 flex h-auto w-full flex-col gap-24 rounded-[var(--rounded-brand)] px-5 pt-24 pb-10 lg:p-0"
 		>
 			<Navigation />
 
