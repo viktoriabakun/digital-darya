@@ -1,6 +1,6 @@
 <script>
 	import Header from '$lib/components/organisms/Header.svelte';
-	import Text from '$lib/components/typography/Text.svelte';
+	import Text from '$lib/components/atoms/Text.svelte';
 </script>
 
 <div class="bg-brand-blue min-h-screen min-w-screen">
