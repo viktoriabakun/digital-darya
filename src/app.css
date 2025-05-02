@@ -7,15 +7,21 @@
 	--color-brand-blue: #102a27;
 	--color-brand-brown: #53340c;
 	--color-neutral-black: #020504;
+
+	--rounded-brand: 20px;
 }
 
 @layer base {
 	html {
-		@apply font-serif scroll-smooth;
+		@apply scroll-smooth font-serif;
 	}
 }
 
-@utility actionLink {
-	@apply inline-flex min-w-fit items-center justify-center size-[52px] p-4 shrink-0 rounded-full bg-white
-	transition-colors group-hover:bg-white/60 group-active:bg-white/10 group-active:text-white;
+@layer components {
+	.section-container {
+		@apply mx-auto w-full max-w-[1288px];
+	}
+	.action-link {
+		@apply inline-flex size-[52px] min-w-fit shrink-0 items-center justify-center rounded-full bg-white p-4 transition-colors group-hover:bg-white/60 group-active:bg-white/10 group-active:text-white;
+	}
 }

@@ -1,8 +1,9 @@
 <script>
+	import { isBurgerMenuOpen as open } from '$lib/stores/burger-menu.svelte';
+	import { lg } from '$lib/utils/media-query.svelte.js';
 	import Navigation from '$lib/components/molecules/Navigation.svelte';
 	import SocialLinks from '$lib/components/molecules/SocialLinks.svelte';
-	import { isBurgerMenuOpen as open, toggleBurgerMenu } from '$lib/stores/burger-menu.svelte';
-	import { lg } from '$lib/utils/media-query.svelte.js';
+	import BurgerButton from '$lib/components/atoms/BurgerButton.svelte';
 
 	$effect(() => {
 		if ($open) {
@@ -23,95 +24,20 @@
 	});
 </script>
 
-<div class="block lg:hidden">
-	<button
-		onclick={toggleBurgerMenu}
-		class={['burger relative z-15', { open: $open }]}
-		type="button"
-		aria-label="Toggle navigation menu"
-	>
-		<span class="absolute top-1/2 left-1/2 size-12 -translate-1/2 [@media(pointer:fine)]:hidden"
-		></span>
-		<span class="burger-top-line"></span>
-		<span class="burger-middle-line"></span>
-		<span class="burger-bottom-line"></span>
-	</button>
+<BurgerButton />
 
+<div
+	class={[
+		' fixed top-0 right-0 z-10 w-full  overflow-x-hidden backdrop-blur-xs transition-[height] duration-300',
+		$open ? 'h-full' : 'h-0'
+	]}
+>
 	<div
 		class={[
-			'absolute top-0 right-0 z-5 origin-top-right transition-transform duration-300 ease-in-out',
-			$open ? 'scale-100' : 'scale-0'
+			'bg-brand-blue relative mx-4 mt-[50px] rounded-[var(--rounded-brand)] px-5 pt-24 pb-10'
 		]}
 	>
-		<div
-			aria-hidden="true"
-			onclick={toggleBurgerMenu}
-			class={['z-0 h-screen w-screen', $open && 'blur-animation']}
-		></div>
-		<div
-			class="bg-brand-blue absolute top-0 right-0 z-10 flex h-auto w-full flex-col gap-24 px-5 pt-24 pb-10 lg:p-0"
-		>
-			<Navigation />
-
-			<SocialLinks class="ml-3" />
-		</div>
+		<Navigation />
+		<SocialLinks class="ml-3 pt-[99px]" />
 	</div>
 </div>
-
-<style>
-	.burger {
-		width: 20px;
-		display: flex;
-		flex-direction: column;
-		gap: 4px;
-		z-index: 10;
-	}
-
-	.burger.open {
-		.burger-top-line {
-			transform: rotate(45deg) translate(4px, 4.5px);
-		}
-
-		.burger-middle-line {
-			opacity: 0;
-		}
-
-		.burger-bottom-line {
-			transform: rotate(-45deg) translate(4px, -4px);
-		}
-	}
-
-	.burger-top-line,
-	.burger-middle-line,
-	.burger-bottom-line {
-		width: 100%;
-		opacity: 1;
-		display: inline-block;
-		height: 2px;
-		background-color: white;
-		border-radius: 2px;
-		transition:
-			transform 200ms ease,
-			opacity 200ms ease;
-	}
-
-	.burger-middle-line {
-		width: 14px;
-	}
-
-	@keyframes blurredBg {
-		from {
-			backdrop-filter: blur(0px);
-			-webkit-backdrop-filter: blur(0px);
-		}
-		to {
-			backdrop-filter: blur(4px);
-			-webkit-backdrop-filter: blur(4px);
-		}
-	}
-
-	.blur-animation {
-		animation: blurredBg 400ms ease-in-out forwards;
-		animation-delay: 100ms;
-	}
-</style>
