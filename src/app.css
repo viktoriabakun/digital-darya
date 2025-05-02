@@ -25,3 +25,7 @@
 		@apply inline-flex size-[52px] min-w-fit shrink-0 items-center justify-center rounded-full bg-white p-4 transition-colors group-hover:bg-white/60 group-active:bg-white/10 group-active:text-white;
 	}
 }
+
+@utility section-scroll-margin {
+	@apply scroll-mt-[108px] lg:scroll-mt-[124px];
+}

@@ -4,7 +4,7 @@
 </script>
 
 <div class="w-full px-4 pt-[50px] lg:pt-[30px]">
-	<section class="section-container">
+	<section id="home" class="section-container section-scroll-margin">
 		<Header />
 		<Text size="xl">
 			sum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias-->
