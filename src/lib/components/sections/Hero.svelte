@@ -3,7 +3,7 @@
 	import Text from '$lib/components/atoms/Text.svelte';
 </script>
 
-<div class="w-full px-4 pt-[50px] lg:px-0 lg:pt-[30px]">
+<div class="w-full px-4 pt-[50px] lg:pt-[30px]">
 	<section class="section-container">
 		<Header />
 		<Text size="xl">

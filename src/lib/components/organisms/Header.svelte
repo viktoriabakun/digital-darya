@@ -2,9 +2,9 @@
 	import Logo from '$lib/components/atoms/Logo.svelte';
 	import Navigation from '$lib/components/molecules/Navigation.svelte';
 	import Link from '$lib/components/atoms/Link.svelte';
-	import BurgerMenu from '$lib/components/molecules/BurgerMenu.svelte';
 	import { lg } from '$lib/utils/media-query.svelte.js';
 	import ArrowUpRightIcon from '$lib/components/icons/ArrowUpRightIcon.svelte';
+	import BurgerMenu from '$lib/components/molecules/BurgerMenu.svelte';
 </script>
 
 <header
@@ -18,7 +18,7 @@
 			<span class="action-link px-8">Hire</span>
 			<span class="action-link"><ArrowUpRightIcon /></span>
 		</Link>
+	{:else}
+		<BurgerMenu />
 	{/if}
-
-	<BurgerMenu />
 </header>
