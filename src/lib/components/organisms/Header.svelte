@@ -11,13 +11,21 @@
 
 <svelte:window bind:scrollY={scroll} />
 
-<header class="fixed top-[50px] left-0 flex w-full items-center justify-center px-4 lg:top-[30px]">
+<header
+	class="fixed top-[50px] left-0 z-30 flex w-full items-center justify-center px-4 lg:top-[30px]"
+>
 	<div
 		class={[
 			'section-container flex items-center justify-between rounded-[var(--rounded-brand)] bg-transparent px-5 py-5 lg:px-9 lg:py-[30px]',
-			'transition-[background-color] duration-150'
+			'transition-[background-color] duration-600 will-change-[background-color]'
 		]}
-		style:background={scroll > 10 ? 'var(--color-brand-blue)' : 'transparent'}
+		style:background={scroll < 50
+			? 'transparent'
+			: scroll < 100
+				? 'var(--color-brand-blue-alfa-50)'
+				: scroll < 150
+					? 'var(--color-brand-blue-alfa-70)'
+					: 'var(--color-brand-blue)'}
 	>
 		<Logo class="relative z-15 flex h-9 w-[165px] shrink-0 lg:h-12 lg:w-[208px]" />
 
