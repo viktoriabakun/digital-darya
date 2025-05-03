@@ -5,6 +5,8 @@
 	--text-md: text-base;
 
 	--color-brand-blue: #102a27;
+	--color-brand-blue-alfa-70: rgba(16, 42, 39, 0.7);
+	--color-brand-blue-alfa-50: rgba(16, 42, 39, 0.5);
 	--color-brand-brown: #53340c;
 	--color-neutral-black: #020504;
 
@@ -24,4 +26,20 @@
 	.action-link {
 		@apply inline-flex size-[52px] min-w-fit shrink-0 items-center justify-center rounded-full bg-white p-4 transition-colors group-hover:bg-white/60 group-active:bg-white/10 group-active:text-white;
 	}
+	.video-gradient {
+		content: '';
+		background: linear-gradient(
+			rgba(0, 0, 0, 0.4),
+			rgba(0, 0, 0, 0.6),
+			rgba(0, 0, 0, 0.9)
+		);
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		border-radius: var(--rounded-brand);
+	}
+}
+
+@utility section-scroll-margin {
+	@apply scroll-mt-[126px] lg:scroll-mt-[142px];
 }

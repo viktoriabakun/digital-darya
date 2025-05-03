@@ -3,7 +3,7 @@
 
 	/** @type {{
 	 * tag?: TextHtmlElement | string,
-	 * size?: 'display-2xl' | 'display-md' | 'xl' | 'lg' | 'md',
+	 * size?: 'display-2xl' | 'display-md' | 'xl' | 'lg' | 'md' | 'sm',
 	 * color?: 'dark' | 'light',
 	 * weight?: 'regular' | 'medium' | 'semibold' | 'bold',
 	 * children: () => any,
@@ -20,11 +20,12 @@
 	} = $props();
 
 	const sizeClasses = {
-		'display-2xl': 'text-[72px] leading-tight',
-		'display-md': 'text-[36px] leading-snug',
-		xl: 'text-[20px] leading-relaxed',
-		lg: 'text-[18px] leading-relaxed',
-		md: 'text-[16px] leading-relaxed'
+		'display-2xl': 'text-[72px] leading-[90px]',
+		'display-md': 'text-[36px] leading-[44px]',
+		xl: 'text-[20px] leading-[30px]',
+		lg: 'text-[16px] leading-6 lg:text-[18px] lg:leading-7',
+		md: 'text-[16px] leading-6',
+		sm: 'text-[14px] leading-5 '
 	};
 
 	const colorClasses = {
