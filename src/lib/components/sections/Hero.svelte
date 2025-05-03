@@ -4,6 +4,15 @@
 	import Link from '$lib/components/atoms/Link.svelte';
 	import ArrowUpRightIcon from '$lib/components/icons/ArrowUpRightIcon.svelte';
 	import { lg } from '$lib/utils/media-query.svelte.js';
+	import { onMount } from 'svelte';
+
+	let video;
+
+	onMount(() => {
+		if (video) {
+			video.play();
+		}
+	});
 </script>
 
 <div class="w-full px-4 pt-[50px] lg:pt-[30px]">
@@ -13,10 +22,12 @@
 	>
 		<div class="video-gradient"></div>
 		<video
+			bind:this={video}
 			class=" absolute z-0 h-full w-full rounded-[var(--rounded-brand)] object-cover object-top"
 			autoplay
 			loop
 			muted
+			playsinline
 			poster=""
 		>
 			<source src="hero-bg-mobile.mp4" type="video/mp4" media="(max-width: 640px)" />
@@ -33,7 +44,7 @@
 					crafted to bring ideas to life.
 				</Text>
 				<Link href="https://example.com" class="mt-8">
-					<span class="action-link px-8">See works</span>
+					<span class="action-link px-8 text-nowrap">See works</span>
 					<span class="action-link"><ArrowUpRightIcon /></span>
 				</Link>
 			</div>
