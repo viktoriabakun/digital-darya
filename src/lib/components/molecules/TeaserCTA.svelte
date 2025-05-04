@@ -2,20 +2,25 @@
 	import Text from '$lib/components/atoms/Text.svelte';
 	import ArrowUpRightIcon from '$lib/components/icons/ArrowUpRightIcon.svelte';
 
-	/** @type {{
-	 * title: string,
-	 * color?: 'dark' | 'light',
-	 * class?: string,
-	 * }} */
-	let { title, color = 'dark', class: className = '' } = $props();
+	/** @typedef {import('svelte').Snippet<[]>} Snippet */
+
+	/**
+	 * @type {{
+	 *   titleSlot: Snippet
+	 *   color?: 'dark' | 'light',
+	 *   class?: string
+	 * }}
+	 */
+
+	let { titleSlot, color = 'dark', class: className = '' } = $props();
 </script>
 
-<div class={['flex w-full justify-between gap-y-2', className]}>
+<div class={['flex w-full justify-between gap-x-2', className]}>
 	<div class="flex flex-col gap-y-2.5">
-		<Text {color} size="lg" weight="bold">{title}</Text>
+		{@render titleSlot()}
 		<Text {color} class="opacity-80">Learn more</Text>
 	</div>
-	<div class="action-link">
-		<ArrowUpRightIcon />
+	<div>
+		<ArrowUpRightIcon class="action-link" />
 	</div>
 </div>

@@ -38,6 +38,9 @@
 		z-index: 1;
 		border-radius: var(--rounded-brand);
 	}
+	.card {
+		@apply flex w-full flex-col justify-between rounded-3xl p-5;
+	}
 }
 
 @utility section-scroll-margin {

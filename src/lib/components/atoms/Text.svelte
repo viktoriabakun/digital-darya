@@ -1,10 +1,11 @@
 <script>
+	/** @typedef {import('svelte/elements').HTMLAttributes<HTMLElement>} BaseHTMLAttributes */
 	/** @typedef {'p' | 'span' | 'div' | 'label' | 'strong' | 'em' | 'small' | 'blockquote' | 'code' | 'mark' | 'time'} TextHtmlElement */
 
-	/** @type {{
+	/** @type {BaseHTMLAttributes & {
 	 * tag?: TextHtmlElement | string,
-	 * size?: 'display-2xl' | 'display-md' | 'xl' | 'lg' | 'md' | 'sm',
 	 * color?: 'dark' | 'light',
+	 * size?: 'display-2xl' | 'display-md' | 'xl' | 'lg' | 'md' | 'sm',
 	 * weight?: 'regular' | 'medium' | 'semibold' | 'bold',
 	 * children: () => any,
 	 * class?: string,
@@ -12,11 +13,12 @@
 
 	let {
 		tag = 'p',
-		size = 'md',
 		color = 'dark',
+		size = 'md',
 		weight = 'regular',
 		children,
-		...restProps
+		class: className,
+		...others
 	} = $props();
 
 	const sizeClasses = {
@@ -43,7 +45,8 @@
 
 <svelte:element
 	this={tag}
-	class={[sizeClasses[size], weightClasses[weight], colorClasses[color], restProps.class]}
+	class={[sizeClasses[size], weightClasses[weight], colorClasses[color], className]}
+	{...others}
 >
 	{@render children()}
 </svelte:element>
