@@ -19,11 +19,11 @@
 			'section-container flex items-center justify-between rounded-[var(--rounded-brand)] bg-transparent px-5 py-5 lg:px-9 lg:py-[30px]',
 			'transition-[background-color] duration-600 will-change-[background-color]'
 		]}
-		style:background={scroll < 50
+		style:background={scroll < 200
 			? 'transparent'
-			: scroll < 100
+			: scroll < 250
 				? 'var(--color-brand-blue-alfa-50)'
-				: scroll < 150
+				: scroll < 300
 					? 'var(--color-brand-blue-alfa-70)'
 					: 'var(--color-brand-blue)'}
 	>
