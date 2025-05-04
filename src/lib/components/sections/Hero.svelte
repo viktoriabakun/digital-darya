@@ -3,13 +3,16 @@
 	import BlogPostCard from '$lib/components/organisms/BlogPostCard.svelte';
 	import Link from '$lib/components/atoms/Link.svelte';
 	import ArrowUpRightIcon from '$lib/components/icons/ArrowUpRightIcon.svelte';
-	import { lg } from '$lib/utils/media-query.svelte.js';
+	import { sm, lg } from '$lib/utils/media-query.svelte.js';
 	import { onMount } from 'svelte';
 
 	let video;
 
 	onMount(() => {
 		if (video) {
+			const poster = sm.current ? 'hero-poster-desktop.webp' : 'hero-poster-mobile.webp';
+			video.poster = poster;
+
 			video.play();
 		}
 	});
@@ -28,9 +31,8 @@
 			loop
 			muted
 			playsinline
-			poster=""
 		>
-			<source src="hero-bg-mobile.mp4" type="video/mp4" media="(max-width: 640px)" />
+			<source src="hero-bg-mobile.mp4" type="video/mp4" media="(max-width: 639px)" />
 			<source src="hero-bg-desktop.mp4" type="video/mp4" />
 		</video>
 
