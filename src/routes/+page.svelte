@@ -1,52 +1,12 @@
 <script>
 	import Hero from '$lib/components/sections/Hero.svelte';
 	import Text from '$lib/components/atoms/Text.svelte';
+	import About from '$lib/components/sections/About.svelte';
 </script>
 
 <Hero />
+<About />
 
-<section class="section-container section-scroll-margin" id="about">
-	<h2 class="text-6xl text-pink-300 lg:text-9xl">About</h2>
-	<Text>
-		about ____ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum,
-		quod. Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem
-		ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias
-		voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet
-		consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet,
-		debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur
-		adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat
-		quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-		Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum
-		quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
-		Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate?
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod.
-		Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum
-		dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum
-		eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet
-		consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatu debitis
-		repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing
-		elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum
-		quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
-		Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate?
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod.
-		Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum
-		dolor sit amet consectetur adipisicing elit. Quisquam, debitis repellat quae rerum quibusdam?
-		Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum,
-		quod. Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem
-		ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias
-		voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet
-		consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet,
-		debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur
-		adipisicing elit. Quisquam, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor
-		sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum
-		eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet
-		consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet,
-		debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur
-		adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat
-		quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-		Quisquam,
-	</Text>
-</section>
 <section class="section-scroll-margin section-container" id="skills">
 	<h2 class="text-6xl text-pink-300 lg:text-9xl">Skills</h2>
 
