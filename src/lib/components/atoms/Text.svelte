@@ -23,7 +23,7 @@
 
 	const sizeClasses = {
 		'display-2xl': 'text-[72px] leading-[90px]',
-		'display-md': 'text-[36px] leading-[44px]',
+		'display-md': 'text-[30px] leading-[38px] lg:text-[36px] lg:leading-[44px]',
 		xl: 'text-[20px] leading-[30px]',
 		lg: 'text-[18px] leading-7',
 		md: 'text-[16px] leading-6',

@@ -1,9 +1,61 @@
 <script>
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { SplitText } from 'gsap/SplitText';
 	import Text from '$lib/components/atoms/Text.svelte';
 	import Tag from '$lib/components/atoms/Tag.svelte';
 	import TeaserCTA from '$lib/components/molecules/TeaserCTA.svelte';
 	import Link from '$lib/components/atoms/Link.svelte';
 	import ArrowUpRightIcon from '$lib/components/icons/ArrowUpRightIcon.svelte';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger, SplitText);
+
+		let split = new SplitText('.text-to-reveal', { type: 'lines' });
+		let masks;
+
+		function revealText() {
+			masks = [];
+			split.lines.forEach((target) => {
+				let mask = document.createElement('span');
+				mask.className = 'textMask';
+				target.append(mask);
+				masks.push(mask);
+				gsap.to(mask, {
+					scaleX: 0,
+					transformOrigin: 'right center',
+					ease: 'none',
+					scrollTrigger: {
+						trigger: target,
+						scrub: true,
+						start: 'top center',
+						end: 'bottom center',
+
+						markers: {
+							startColor: 'white',
+							endColor: '#42a6e0',
+							fontSize: '12px',
+							indent: 10
+						}
+					}
+				});
+			});
+		}
+
+		window.addEventListener('resize', newTriggers);
+
+		function newTriggers() {
+			ScrollTrigger.getAll().forEach((trigger, i) => {
+				trigger.kill();
+				masks[i].remove();
+			});
+			split.split();
+			revealText();
+		}
+
+		revealText();
+	});
 </script>
 
 <section id="about" class="section-scroll-margin section-container px-4 xl:px-0">
@@ -98,4 +150,34 @@
 			</div>
 		</a>
 	</div>
+
+	<section class="pin-section">
+		<div
+			class="flex flex-col gap-10 pt-[208px] pb-[160px] lg:gap-[74px] lg:pt-[362px] lg:pb-[342px]"
+		>
+			<Text class="text-to-reveal" size="display-md" weight="semibold">
+				In this site portfolio, you will find some of my best UX/UI design projects that showcase my
+				skills and process. I will walk you through the challenges, solutions, and outcomes of each
+				project, as well as the tools and methods I used.
+			</Text>
+			<Text class="text-to-reveal" size="display-md" weight="semibold">
+				My mission is to help products become bright and successful. By understanding your user's
+				needs and together develop an amazing project.
+			</Text>
+		</div>
+	</section>
 </section>
+
+<!--<style>-->
+<!--	.mask {-->
+<!--		position: absolute;-->
+<!--		display: block;-->
+<!--		width: 100%;-->
+<!--		height: 115%;-->
+<!--		background: #161616;-->
+<!--		left: 0;-->
+<!--		top: 0;-->
+<!--		opacity: 0.8;-->
+<!--		transform-origin: right center;-->
+<!--	}-->
+<!--</style>-->

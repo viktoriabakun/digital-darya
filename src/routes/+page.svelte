@@ -7,6 +7,53 @@
 <Hero />
 <About />
 
+<section class="section-container section-scroll-margin" id="works">
+	<h2 class="text-6xl text-pink-300 italic lg:text-9xl">Works</h2>
+	<Text>
+		works _____ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum,
+		quod. Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem
+		ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias
+		voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet
+		consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet,
+		debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur
+		adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat
+		quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum
+		quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisqug elit.
+		Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum
+		quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+		Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate?
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod.
+		Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum
+		dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum
+		eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet
+		consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet,
+		debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur
+		adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat
+		quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum
+		quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+		Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate?
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod.
+		Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum
+		dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum
+		eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet
+		consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet,
+		debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur
+		adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat
+		quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum
+		quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+		Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate?
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod.
+		Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum
+		dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum
+		eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet
+		consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet,
+		debitis repellat quae rerum quibusdam? Voluptate?
+	</Text>
+</section>
+
 <section class="section-scroll-margin section-container" id="skills">
 	<h2 class="text-6xl text-pink-300 lg:text-9xl">Skills</h2>
 
@@ -55,53 +102,6 @@
 		quod. Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem
 		ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias
 		voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet
-		consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet,
-		debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur
-		adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat
-		quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-		Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum
-		quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
-		Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate?
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod.
-		Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum
-		dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum
-		eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet
-		consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet,
-		debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur
-		adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat
-		quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-		Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum
-		quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
-		Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate?
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod.
-		Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum
-		dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum
-		eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet
-		consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet,
-		debitis repellat quae rerum quibusdam? Voluptate?
-	</Text>
-</section>
-
-<section class="section-container section-scroll-margin" id="works">
-	<h2 class="text-6xl text-pink-300 italic lg:text-9xl">Works</h2>
-	<Text>
-		works _____ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum,
-		quod. Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem
-		ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias
-		voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet
-		consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet,
-		debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur
-		adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat
-		quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-		Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum
-		quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisqug elit.
-		Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum
-		quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
-		Dolorum, quod. Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate?
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod.
-		Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum
-		dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum
-		eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet
 		consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet,
 		debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur
 		adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat
