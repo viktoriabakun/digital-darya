@@ -6,7 +6,7 @@
 	import ArrowUpRightIcon from '$lib/components/icons/ArrowUpRightIcon.svelte';
 </script>
 
-<section id="about" class="section-scroll-margin section-container px-4">
+<section id="about" class="section-scroll-margin section-container px-4 xl:px-0">
 	<section class="flex flex-col gap-y-10 py-[200px] lg:pr-[72px]">
 		<h2 class="text-4xl leading-11 font-semibold">Welcome to My Digital Playground</h2>
 		<div
@@ -26,74 +26,80 @@
 		</div>
 	</section>
 
-	<a href="#skills" aria-labelledby="skills-link-title">
-		<div class="card group bg-brand-brown/10 aspect-[365/316] lg:max-w-[365px]">
-			<Tag color="brown">Skills</Tag>
-
-			<TeaserCTA>
-				{#snippet titleSlot()}
-					<Text id="skills-link-title" size="lg" weight="bold">
-						Explore my full range of <br /> design skills
-					</Text>
-				{/snippet}
-			</TeaserCTA>
-		</div>
-	</a>
-
-	<a href="#contacts" aria-labelledby="contacts-link-title">
-		<div class="card group bg-brand-blue/10 aspect-[365/316] lg:max-w-[365px]">
-			<Tag color="blue">Contacts</Tag>
-
-			<TeaserCTA>
-				{#snippet titleSlot()}
-					<Text id="contacts-link-title" size="lg" weight="bold">Let’s discuss your ideas</Text>
-				{/snippet}
-			</TeaserCTA>
-		</div>
-	</a>
-
-	<a href="#works" aria-labelledby="works-link-title">
-		<div
-			class="card group aspect-[365/316] bg-[url(/about-img-3.webp)] bg-cover bg-center bg-no-repeat lg:max-w-[365px]"
+	<div
+		class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-[minmax(200px,_518px)_minmax(220px,_365px)_minmax(220px,_365px)]"
+	>
+		<Link
+			class="mb-5 self-start sm:col-span-2 sm:mb-0 md:col-span-1"
+			aria-label="Hire"
+			href="https://example.com"
 		>
-			<Tag color="neutral">Works</Tag>
+			<div class="card group aspect-[518/653] bg-[url(/about-img-1.webp)] md:max-w-[518px]">
+				<Tag color="neutral">Nice to meet you!</Tag>
 
-			<TeaserCTA color="light">
-				{#snippet titleSlot()}
-					<Text id="works-link-title" color="light" size="lg" weight="bold">
-						Check out <br /> my latest projects
-					</Text>
-				{/snippet}
-			</TeaserCTA>
-		</div>
-	</a>
-
-	<a href="#experience" aria-labelledby="experience-link-title">
-		<div
-			class="card group aspect-[365/316] bg-[url(/about-img-2.webp)] bg-cover bg-center bg-no-repeat lg:max-w-[365px]"
-		>
-			<Tag color="neutral">Experience</Tag>
-
-			<TeaserCTA color="light">
-				{#snippet titleSlot()}
-					<Text id="experience-link-title" color="light" size="lg" weight="bold">
-						A glimpse into my 5 years of experience
-					</Text>
-				{/snippet}
-			</TeaserCTA>
-		</div>
-	</a>
-
-	<Link aria-label="Hire" class="w-full" href="https://example.com">
-		<div
-			class="card group aspect-[518/653] max-w-[518px] bg-[url(/about-img-1.webp)] bg-cover bg-center bg-no-repeat"
-		>
-			<Tag color="neutral">Nice to meet you!</Tag>
-
-			<div class="flex self-end">
-				<span class="action-link px-8">Hire</span>
-				<span class="action-link"><ArrowUpRightIcon /></span>
+				<div class="flex self-end">
+					<span class="action-link px-8">Hire</span>
+					<span class="action-link"><ArrowUpRightIcon /></span>
+				</div>
 			</div>
+		</Link>
+
+		<div class="grid gap-y-5">
+			<a href="#skills" aria-labelledby="skills-link-title">
+				<div
+					class="card group bg-brand-brown/10 aspect-[365/220] sm:aspect-[365/316] lg:max-w-[365px]"
+				>
+					<Tag color="brown">Skills</Tag>
+
+					<TeaserCTA>
+						<Text id="skills-link-title" size="lg" weight="bold">
+							Explore my full range of <br /> design skills
+						</Text>
+					</TeaserCTA>
+				</div>
+			</a>
+
+			<a href="#works" aria-labelledby="works-link-title">
+				<div
+					class="card group aspect-[365/220] bg-[url(/about-img-3.webp)] sm:aspect-[365/316] lg:max-w-[365px]"
+				>
+					<Tag color="neutral">Works</Tag>
+
+					<TeaserCTA color="light">
+						<Text id="works-link-title" color="light" size="lg" weight="bold">
+							Check out <br /> my latest projects
+						</Text>
+					</TeaserCTA>
+				</div>
+			</a>
 		</div>
-	</Link>
+
+		<div class="grid gap-y-5">
+			<a href="#experience" aria-labelledby="experience-link-title">
+				<div
+					class="card group aspect-[365/220] bg-[url(/about-img-2.webp)] sm:aspect-[365/316] lg:max-w-[365px]"
+				>
+					<Tag color="neutral">Experience</Tag>
+
+					<TeaserCTA color="light">
+						<Text id="experience-link-title" color="light" size="lg" weight="bold">
+							A glimpse into my 5 years of experience
+						</Text>
+					</TeaserCTA>
+				</div>
+			</a>
+
+			<a href="#contact" aria-labelledby="contact-link-title">
+				<div
+					class="card group bg-brand-blue/10 aspect-[365/220] sm:aspect-[365/316] lg:max-w-[365px]"
+				>
+					<Tag color="blue">Contact</Tag>
+
+					<TeaserCTA>
+						<Text id="contact-link-title" size="lg" weight="bold">Let’s discuss your ideas</Text>
+					</TeaserCTA>
+				</div>
+			</a>
+		</div>
+	</div>
 </section>

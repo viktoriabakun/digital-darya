@@ -6,18 +6,18 @@
 
 	/**
 	 * @type {{
-	 *   titleSlot: Snippet
 	 *   color?: 'dark' | 'light',
 	 *   class?: string
+	 *   children: Snippet
 	 * }}
 	 */
 
-	let { titleSlot, color = 'dark', class: className = '' } = $props();
+	let { color = 'dark', class: className = '', children } = $props();
 </script>
 
-<div class={['flex w-full justify-between gap-x-2', className]}>
+<div class={['flex w-full items-end justify-between gap-x-2', className]}>
 	<div class="flex flex-col gap-y-2.5">
-		{@render titleSlot()}
+		{@render children()}
 		<Text {color} class="opacity-80">Learn more</Text>
 	</div>
 	<div>
