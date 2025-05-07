@@ -18,7 +18,7 @@
 	});
 </script>
 
-<div class="w-full px-4 pt-[50px] lg:pt-[30px]">
+<div class="h-full w-full px-4 pt-[50px] lg:pt-[30px]">
 	<section
 		id="home"
 		class="section-container bg-brand-blue section-scroll-margin relative aspect-[358/760] max-h-[760px] rounded-[var(--rounded-brand)] lg:aspect-[1288/797] lg:max-h-[798px]"
@@ -36,7 +36,9 @@
 			<source src="hero-bg-desktop.mp4" type="video/mp4" />
 		</video>
 
-		<div class="relative z-20 flex h-full items-end justify-between gap-10 px-5 pb-8.5 lg:px-9">
+		<div
+			class="absolute z-20 flex h-full w-full flex-col justify-end gap-10 px-5 pb-8.5 lg:flex-row lg:items-end lg:justify-between lg:px-9"
+		>
 			<div class="max-w-[325px] sm:max-w-100 lg:max-w-[585px]">
 				<h2 class="text-5xl leading-[50px] font-normal text-white lg:text-7xl lg:leading-[90px]">
 					Creating Digital Design With Ease
