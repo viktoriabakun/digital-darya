@@ -1,5 +1,7 @@
 <script>
-	/** @type {{
+	/** @typedef {import('svelte/elements').HTMLAttributes<HTMLAnchorElement>} AnchorAttributes */
+
+	/** @type { AnchorAttributes &{
 	 * href: string,
 	 * target?: '_blank' | '_self' | '_parent' | '_top',
 	 * rel?: string,
@@ -12,10 +14,17 @@
 		target = '_blank',
 		rel = 'noopener noreferrer',
 		children,
-		...restProps
+		class: className,
+		...others
 	} = $props();
 </script>
 
-<a {href} {target} {rel} class={['group inline-flex items-center align-middle', restProps.class]}>
+<a
+	{href}
+	{target}
+	{rel}
+	class={['group inline-flex items-center align-middle', className]}
+	{...others}
+>
 	{@render children?.()}
 </a>
