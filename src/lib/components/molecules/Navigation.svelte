@@ -7,8 +7,8 @@
 	const navLinks = [
 		{ title: 'Home', target: '#home' },
 		{ title: 'About', target: '#about' },
-		{ title: 'Skills', target: '#skills' },
 		{ title: 'Works', target: '#works' },
+		{ title: 'Skills', target: '#skills' },
 		{ title: 'Contact', target: '#contact' }
 	];
 

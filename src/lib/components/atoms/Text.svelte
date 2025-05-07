@@ -1,10 +1,11 @@
 <script>
+	/** @typedef {import('svelte/elements').HTMLAttributes<HTMLElement>} BaseHTMLAttributes */
 	/** @typedef {'p' | 'span' | 'div' | 'label' | 'strong' | 'em' | 'small' | 'blockquote' | 'code' | 'mark' | 'time'} TextHtmlElement */
 
-	/** @type {{
+	/** @type {BaseHTMLAttributes & {
 	 * tag?: TextHtmlElement | string,
-	 * size?: 'display-2xl' | 'display-md' | 'xl' | 'lg' | 'md' | 'sm',
 	 * color?: 'dark' | 'light',
+	 * size?: 'display-2xl' | 'display-md' | 'xl' | 'lg' | 'md' | 'sm',
 	 * weight?: 'regular' | 'medium' | 'semibold' | 'bold',
 	 * children: () => any,
 	 * class?: string,
@@ -12,18 +13,19 @@
 
 	let {
 		tag = 'p',
-		size = 'md',
 		color = 'dark',
+		size = 'md',
 		weight = 'regular',
 		children,
-		...restProps
+		class: className,
+		...others
 	} = $props();
 
 	const sizeClasses = {
 		'display-2xl': 'text-[72px] leading-[90px]',
-		'display-md': 'text-[36px] leading-[44px]',
+		'display-md': 'text-[30px] leading-[38px] lg:text-[36px] lg:leading-[44px]',
 		xl: 'text-[20px] leading-[30px]',
-		lg: 'text-[16px] leading-6 lg:text-[18px] lg:leading-7',
+		lg: 'text-[18px] leading-7',
 		md: 'text-[16px] leading-6',
 		sm: 'text-[14px] leading-5 '
 	};
@@ -43,7 +45,8 @@
 
 <svelte:element
 	this={tag}
-	class={[sizeClasses[size], weightClasses[weight], colorClasses[color], restProps.class]}
+	class={[sizeClasses[size], weightClasses[weight], colorClasses[color], className]}
+	{...others}
 >
 	{@render children()}
 </svelte:element>
