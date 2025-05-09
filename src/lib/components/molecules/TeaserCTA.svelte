@@ -21,6 +21,6 @@
 		<Text {color} class="opacity-80">Learn more</Text>
 	</div>
 	<div>
-		<ArrowUpRightIcon class="action-link" />
+		<ArrowUpRightIcon class="action-link-light" />
 	</div>
 </div>

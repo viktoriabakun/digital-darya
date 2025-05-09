@@ -5,7 +5,7 @@
 	/** @type {BaseHTMLAttributes & {
 	 * tag?: TextHtmlElement | string,
 	 * color?: 'dark' | 'light',
-	 * size?: 'display-2xl' | 'display-md' | 'xl' | 'lg' | 'md' | 'sm',
+	 * size?: 'display-2xl' | 'display-md' | 'xl' | 'lg' | 'md' | 'sm' | 'xs' | 'xxs',
 	 * weight?: 'regular' | 'medium' | 'semibold' | 'bold',
 	 * children: () => any,
 	 * class?: string,
@@ -27,7 +27,9 @@
 		xl: 'text-[20px] leading-[30px]',
 		lg: 'text-[18px] leading-7',
 		md: 'text-[16px] leading-6',
-		sm: 'text-[14px] leading-5 '
+		sm: 'text-[14px] leading-5 ',
+		xs: 'text-[12px] leading-4',
+		xxs: 'text-[8px] leading-3'
 	};
 
 	const colorClasses = {
