@@ -69,15 +69,34 @@
 			theme: 'dark'
 		}
 	];
+
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
+		const container = document.getElementById('works');
+		const cases = gsap.utils.toArray('#case-wrapper');
+
+		gsap.to(cases, {
+			xPercent: -100 * (cases.length - 1),
+			ease: 'none',
+			scrollTrigger: {
+				trigger: container,
+				pin: true,
+				scrub: true,
+				markers: true,
+				end: `+=${container?.offsetWidth}`
+			}
+		});
+	});
 </script>
 
 <section
 	id="works"
-	class="flex min-h-screen w-screen items-center justify-center bg-black px-6 py-12 xl:p-0"
+	class="flex min-h-screen w-screen items-end overflow-x-scroll bg-black pb-5 lg:items-center"
 >
-	<div id="case-wrapper">
-		{#each cases as caseItem (caseItem.id)}
+	{#each cases as caseItem (caseItem.id)}
+		<div class="w-full shrink-0 px-4" id="case-wrapper">
 			<CaseCard {...caseItem} />
-		{/each}
-	</div>
+		</div>
+	{/each}
 </section>

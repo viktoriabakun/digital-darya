@@ -43,7 +43,7 @@
 
 <div
 	class={[
-		'max-container mt-[calc(100vh/10)] grid w-full grid-cols-1 overflow-hidden rounded-[var(--rounded-brand)] md:grid-cols-[_minmax(100px,_660px)_minmax(_500px,_1fr)] lg:min-h-[660px]',
+		'max-container grid w-full grid-cols-1 overflow-hidden rounded-[var(--rounded-brand)] md:grid-cols-[_minmax(100px,_660px)_minmax(_500px,_1fr)] xl:min-h-[660px]',
 		themeVariants[theme].container
 	]}
 >
@@ -54,12 +54,12 @@
 
 		<h3 class="max-w-lg text-2xl leading-8 tracking-[0.8spx] lg:text-4xl lg:leading-11">{title}</h3>
 		<Text
-			class="max-w-lg tracking-[0.6px]"
+			class="line-clamp-5 max-w-lg tracking-[0.6px]"
 			color={themeVariants[theme].text}
 			size={lg.current ? 'lg' : 'md'}>{description}</Text
 		>
 
-		<div class="flex flex-col gap-5 md:mt-auto md:flex-row md:items-end md:justify-between">
+		<div class="flex grow flex-col gap-5 md:flex-row md:items-end md:justify-between">
 			<Link {href}>
 				<span class={['!px-8', themeVariants[theme].link]}>{linkText}</span>
 				<span class={['size-[56px]', themeVariants[theme].link]}><ArrowUpRightIcon /></span>
