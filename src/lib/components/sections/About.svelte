@@ -138,7 +138,7 @@
 		class="pin-section flex h-screen max-w-[900px] flex-col justify-center gap-10 pt-10 md:pt-20 lg:gap-[74px] lg:pt-24"
 	>
 		<Text
-			class="text-to-reveal text-neutral-black/10 !text-[3vh] !leading-[4vh] md:!text-4xl md:!leading-11"
+			class="text-to-reveal text-neutral-black/10 !text-[3svh] !leading-[4svh] md:!text-4xl md:!leading-11"
 			weight="semibold"
 		>
 			In this site portfolio, you will find some of my best UX/UI design projects that showcase my
@@ -146,7 +146,7 @@
 			project, as well as the tools and methods I used.
 		</Text>
 		<Text
-			class="text-to-reveal text-neutral-black/10 !text-[3vh] !leading-[4vh] md:!text-4xl md:!leading-11"
+			class="text-to-reveal text-neutral-black/10 !text-[3svh] !leading-[4svh] md:!text-4xl md:!leading-11"
 			weight="semibold"
 		>
 			My mission is to help products become bright and successful. By understanding your user's

@@ -83,7 +83,6 @@
 				trigger: container,
 				pin: true,
 				scrub: true,
-				markers: true,
 				end: `+=${container?.offsetWidth}`
 			}
 		});
@@ -92,7 +91,7 @@
 
 <section
 	id="works"
-	class="flex min-h-screen w-screen items-end overflow-x-scroll bg-black pb-5 lg:items-center"
+	class="flex min-h-screen w-screen items-center overflow-x-scroll bg-black pt-[106px] pb-5 lg:pt-[146px]"
 >
 	{#each cases as caseItem (caseItem.id)}
 		<div class="w-full shrink-0 px-4" id="case-wrapper">

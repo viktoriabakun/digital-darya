@@ -6,7 +6,7 @@
 </script>
 
 <Hero />
-<!--<About />-->
+<About />
 <Works />
 
 <section class="section-scroll-margin max-container" id="skills">
@@ -17,7 +17,7 @@
 		quod. Molestias voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem
 		ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias
 		voluptatum eveniet, debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet
-		consectetur adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet,
+		consectetur adipisicing elit. Quis quam, quae. Dolorum, quod. Molestias voluptatum eveniet,
 		debitis repellat quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur
 		adipisicing elit. Quisquam, quae. Dolorum, quod. Molestias voluptatum eveniet, debitis repellat
 		quae rerum quibusdam? Voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit.

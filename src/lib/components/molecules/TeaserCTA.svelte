@@ -20,7 +20,7 @@
 		{@render children()}
 		<Text {color} class="opacity-80">Learn more</Text>
 	</div>
-	<div>
-		<ArrowUpRightIcon class="action-link-light" />
-	</div>
+	<span class="action-link-light size-[56px]">
+		<ArrowUpRightIcon />
+	</span>
 </div>
