@@ -18,10 +18,10 @@
 	});
 </script>
 
-<div class="h-full w-full px-4 pt-[50px] lg:pt-[30px]">
+<div class="h-full w-full px-4 pt-[30px]">
 	<section
 		id="home"
-		class="section-container bg-brand-blue section-scroll-margin relative aspect-[358/760] max-h-[760px] rounded-[var(--rounded-brand)] lg:aspect-[1288/797] lg:max-h-[798px]"
+		class="section-container max-container bg-brand-blue section-scroll-margin relative aspect-[358/760] max-h-[760px] rounded-[var(--rounded-brand)] lg:aspect-[1288/797] lg:max-h-[798px]"
 	>
 		<div class="video-gradient"></div>
 		<video
@@ -48,8 +48,8 @@
 					crafted to bring ideas to life.
 				</Text>
 				<Link href="https://example.com" class="mt-8">
-					<span class="action-link px-8 text-nowrap">See works</span>
-					<span class="action-link"><ArrowUpRightIcon /></span>
+					<span class="action-link-light px-8 text-nowrap">See works</span>
+					<span class="action-link-light size-[56px]"><ArrowUpRightIcon /></span>
 				</Link>
 			</div>
 			{#if lg.current}

@@ -41,7 +41,7 @@
 	});
 </script>
 
-<section id="about" class="section-scroll-margin section-container px-4 xl:px-0">
+<section id="about" class="section-scroll-margin max-container px-4 xl:px-0">
 	<section class="flex flex-col gap-y-10 py-[200px] lg:pr-[72px]">
 		<h2 class="text-4xl leading-11 font-semibold">Welcome to My Digital Playground</h2>
 		<div
@@ -69,19 +69,19 @@
 			aria-label="Hire"
 			href="https://example.com"
 		>
-			<div class="card group aspect-[518/653] bg-[url(/about-img-1.webp)] md:max-w-[518px]">
-				<Tag color="neutral">Nice to meet you!</Tag>
+			<div class="card group aspect-[calc(518/653)] bg-[url(/about-img-1.webp)] md:max-w-[518px]">
+				<Tag color="neutralLight">Nice to meet you!</Tag>
 
 				<div class="flex self-end">
-					<span class="action-link px-8">Hire</span>
-					<span class="action-link"><ArrowUpRightIcon /></span>
+					<span class="action-link-light px-8">Hire</span>
+					<span class="action-link-light size-[56px]"><ArrowUpRightIcon /></span>
 				</div>
 			</div>
 		</Link>
 
 		<a href="#skills" aria-labelledby="skills-link-title">
 			<div
-				class="card group bg-brand-brown/10 aspect-[365/220] sm:aspect-[365/316] lg:max-w-[365px]"
+				class="card group bg-brand-brown/10 aspect-[calc(365/220)] sm:aspect-[calc(365/316)] lg:max-w-[365px]"
 			>
 				<Tag color="brown">Skills</Tag>
 
@@ -95,9 +95,9 @@
 
 		<a href="#works" aria-labelledby="works-link-title">
 			<div
-				class="card group aspect-[365/220] bg-[url(/about-img-3.webp)] sm:aspect-[365/316] lg:max-w-[365px]"
+				class="card group aspect-[calc(365/220)] bg-[url(/about-img-3.webp)] sm:aspect-[calc(365/316)] lg:max-w-[365px]"
 			>
-				<Tag color="neutral">Works</Tag>
+				<Tag color="neutralLight">Works</Tag>
 
 				<TeaserCTA color="light">
 					<Text id="works-link-title" color="light" size="lg" weight="bold">
@@ -109,9 +109,9 @@
 
 		<a href="#experience" aria-labelledby="experience-link-title">
 			<div
-				class="card group aspect-[365/220] bg-[url(/about-img-2.webp)] sm:aspect-[365/316] lg:max-w-[365px]"
+				class="card group aspect-[calc(365/220)] bg-[url(/about-img-2.webp)] sm:aspect-[calc(365/316)] lg:max-w-[365px]"
 			>
-				<Tag color="neutral">Experience</Tag>
+				<Tag color="neutralLight">Experience</Tag>
 
 				<TeaserCTA color="light">
 					<Text id="experience-link-title" color="light" size="lg" weight="bold">
@@ -123,7 +123,7 @@
 
 		<a href="#contact" aria-labelledby="contact-link-title">
 			<div
-				class="card group bg-brand-blue/10 aspect-[365/220] sm:aspect-[365/316] lg:max-w-[365px]"
+				class="card group bg-brand-blue/10 aspect-[calc(365/220)] sm:aspect-[calc(365/316)] lg:max-w-[365px]"
 			>
 				<Tag color="blue">Contact</Tag>
 
@@ -138,7 +138,7 @@
 		class="pin-section flex h-screen max-w-[900px] flex-col justify-center gap-10 pt-10 md:pt-20 lg:gap-[74px] lg:pt-24"
 	>
 		<Text
-			class="text-to-reveal text-neutral-black/10 !text-[3vh] !leading-[4vh] md:!text-4xl md:!leading-11"
+			class="text-to-reveal text-neutral-black/10 !text-[3svh] !leading-[4svh] md:!text-4xl md:!leading-11"
 			weight="semibold"
 		>
 			In this site portfolio, you will find some of my best UX/UI design projects that showcase my
@@ -146,7 +146,7 @@
 			project, as well as the tools and methods I used.
 		</Text>
 		<Text
-			class="text-to-reveal text-neutral-black/10 !text-[3vh] !leading-[4vh] md:!text-4xl md:!leading-11"
+			class="text-to-reveal text-neutral-black/10 !text-[3svh] !leading-[4svh] md:!text-4xl md:!leading-11"
 			weight="semibold"
 		>
 			My mission is to help products become bright and successful. By understanding your user's
