@@ -1,5 +1,6 @@
 <script>
 	import Text from '$lib/components/atoms/Text.svelte';
+	import { enhance } from '$app/forms';
 </script>
 
 <section id="contacts" class="section-scroll-margin overflow-x-hidden">
@@ -19,7 +20,12 @@
 				you!</Text
 			>
 
-			<form class="mt-8 grid w-full max-w-[480px] grid-cols-1 gap-6">
+			<form
+				method="POST"
+				use:enhance
+				action="/"
+				class="mt-8 grid w-full max-w-[480px] grid-cols-1 gap-6"
+			>
 				<div class="flex w-full flex-col gap-y-6 lg:flex-row lg:gap-x-8">
 					<div class="form-group w-full">
 						<label class="form-label" for="firstName">First name *</label>
@@ -58,6 +64,12 @@
 					/>
 				</div>
 
+				<!--			honeypot -->
+				<div class="hidden">
+					<label for="company"></label>
+					<input name="company" type="text" tabindex="-1" autocomplete="off" />
+				</div>
+
 				<div class="form-group">
 					<label class="form-label" for="message">Message *</label>
 					<textarea
@@ -71,17 +83,11 @@
 				</div>
 
 				<button
-					class="bg-brand-blue mt-2 w-full rounded-4xl py-3 font-semibold text-white"
+					class="bg-brand-blue mt-2 w-full cursor-pointer rounded-4xl py-3 font-semibold text-white"
 					type="submit"
 				>
 					Send
 				</button>
-
-				<!--			honeypot -->
-				<div class="sr-only">
-					<label for="company"></label>
-					<input name="company" type="text" />
-				</div>
 			</form>
 		</div>
 	</div>
