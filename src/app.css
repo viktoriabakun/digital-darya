@@ -45,6 +45,19 @@
 	.card {
 		@apply flex w-full flex-col justify-between rounded-3xl p-5 bg-cover bg-center bg-no-repeat;
 	}
+	.form-group{
+		@apply flex flex-col gap-1.5;
+	}
+	.form-label {
+		@apply block text-sm font-medium text-brand-blue leading-5;
+	}
+	.input {
+		@apply py-2.5 px-[14px] w-full rounded-2xl border border-neutral-black/10 shadow-xs shadow-neutral-black/10;
+
+	&::placeholder {
+			@apply text-neutral-black/60;
+		}
+	}
 }
 
 @utility section-scroll-margin {

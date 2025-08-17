@@ -5,6 +5,7 @@
 	import Skills from '$lib/components/sections/Skills.svelte';
 	import Reviews from '$lib/components/sections/Reviews.svelte';
 	import Experience from '$lib/components/sections/Experience.svelte';
+	import Contacts from '$lib/components/sections/Contacts.svelte';
 </script>
 
 <Hero />
@@ -13,10 +14,4 @@
 <Skills />
 <Reviews />
 <Experience />
-
-<style>
-	section {
-		border: 1px solid gray;
-		padding: 40px 0;
-	}
-</style>
+<Contacts />
