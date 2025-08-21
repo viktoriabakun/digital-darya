@@ -1,4 +1,6 @@
 <script>
+	import { cn } from '$lib/utils/cn.js';
+
 	/** @typedef {import('svelte/elements').HTMLAttributes<HTMLElement>} BaseHTMLAttributes */
 	/** @typedef {'p' | 'span' | 'div' | 'label' | 'strong' | 'em' | 'small' | 'blockquote' | 'code' | 'mark' | 'time'} TextHtmlElement */
 
@@ -47,7 +49,7 @@
 
 <svelte:element
 	this={tag}
-	class={[sizeClasses[size], weightClasses[weight], colorClasses[color], className]}
+	class={cn(sizeClasses[size], weightClasses[weight], colorClasses[color], className)}
 	{...others}
 >
 	{@render children()}

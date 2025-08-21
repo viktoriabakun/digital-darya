@@ -18,12 +18,12 @@
 			split && split.revert();
 			tl && tl.revert();
 
-			split = new SplitText('.text-to-reveal', { type: 'chars, words' });
+			split = new SplitText('#text-to-reveal', { type: 'chars, words' });
 
 			tl = gsap
 				.timeline({
 					scrollTrigger: {
-						trigger: '.pin-section',
+						trigger: '#pin-section',
 						start: 'top top',
 						end: '+=150%',
 						pin: true,
@@ -135,10 +135,12 @@
 	</div>
 
 	<section
-		class="pin-section flex h-screen max-w-[900px] flex-col justify-center gap-10 pt-10 md:pt-20 lg:gap-[74px] lg:pt-24"
+		id="pin-section"
+		class="flex h-screen max-w-[900px] flex-col justify-center gap-10 pt-10 md:pt-20 lg:gap-[74px] lg:pt-24"
 	>
 		<Text
-			class="text-to-reveal text-neutral-black/10 !text-[3svh] !leading-[4svh] md:!text-4xl md:!leading-11"
+			id="text-to-reveal"
+			class="text-neutral-black/10 !text-[3svh] !leading-[4svh] md:!text-4xl md:!leading-11"
 			weight="semibold"
 		>
 			In this site portfolio, you will find some of my best UX/UI design projects that showcase my
@@ -146,7 +148,8 @@
 			project, as well as the tools and methods I used.
 		</Text>
 		<Text
-			class="text-to-reveal text-neutral-black/10 !text-[3svh] !leading-[4svh] md:!text-4xl md:!leading-11"
+			id="text-to-reveal"
+			class="text-neutral-black/10 !text-[3svh] !leading-[4svh] md:!text-4xl md:!leading-11"
 			weight="semibold"
 		>
 			My mission is to help products become bright and successful. By understanding your user's
