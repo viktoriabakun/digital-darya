@@ -5,6 +5,13 @@
 
 	const workExperience = [
 		{
+			company: 'FREELANCE',
+			period: '2024 - Present',
+			position: 'UX/UI Designer',
+			description:
+				'I moved into freelance UX/UI design and now oversee 2 to 3 projects with different focuses each month. At Funnelr.com, I manage and continually improve the design of a proprietary CMS tools focused on automating and optimizing business processes.  I also work on the Beauty AI App and other startups, making strides in the innovation of digital tools in different industries.'
+		},
+		{
 			company: 'SOFTTECO',
 			period: '2023 - 2024 (1 year)',
 			position: 'UX/UI Designer',
