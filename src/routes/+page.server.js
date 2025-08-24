@@ -4,7 +4,6 @@ import {
 	CONTACT_FORM_EMAIL_TO,
 	CONTACT_FORM_EMAIL_FROM
 } from '$env/static/private';
-import { formState } from '$lib/stores/form.svelte.js';
 
 /** @satisfies {import('./$types').Actions} */
 export const actions = {
