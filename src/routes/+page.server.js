@@ -4,6 +4,7 @@ import {
 	CONTACT_FORM_EMAIL_TO,
 	CONTACT_FORM_EMAIL_FROM
 } from '$env/static/private';
+import { formState } from '$lib/stores/form.svelte.js';
 
 /** @satisfies {import('./$types').Actions} */
 export const actions = {
@@ -30,23 +31,25 @@ export const actions = {
 				to: CONTACT_FORM_EMAIL_TO,
 				subject: `${firstName} ${lastName} sent you a message`,
 				html: `
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>New Contact Message</title>
-  </head>
-  <body style="font-family: sans-serif; background: #ffffff; padding: 20px; color: #333;">
-    <h2>New Contact Form Submission</h2>
+			<!DOCTYPE html>
+			<html lang="en">
+			  <head>
+			    <meta charset="UTF-8" />
+			    <title>New Contact Message</title>
+			  </head>
+			  <body style="font-family: sans-serif; background: #ffffff; padding: 20px; color: #333;">
+			    <h2>New Contact Form Submission</h2>
 
-    <p><strong>First Name:</strong> ${firstName}</p>
-    <p><strong>Last Name:</strong> ${lastName}</p>
-    <p><strong>Email:</strong> ${email}</p>
-    <p><strong>Message:</strong><br />${message}</p>
-  </body>
-</html>
-`
+			    <p><strong>First Name:</strong> ${firstName}</p>
+			    <p><strong>Last Name:</strong> ${lastName}</p>
+			    <p><strong>Email:</strong> ${email}</p>
+			    <p><strong>Message:</strong><br />${message}</p>
+			  </body>
+			</html>
+			`
 			});
+
+			return { success: true };
 		} catch (error) {
 			// TODO: add logging
 			// add error handling

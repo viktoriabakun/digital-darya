@@ -52,11 +52,15 @@
 		@apply block text-sm font-medium text-brand-blue leading-5;
 	}
 	.input {
-		@apply py-2.5 px-[14px] w-full rounded-2xl border border-neutral-black/10 shadow-xs shadow-neutral-black/10;
+		@apply py-2.5 px-[14px] w-full bg-white rounded-2xl border text-[#181D27] border-neutral-black/10 shadow-xs shadow-neutral-black/10;
 
 	&::placeholder {
 			@apply text-neutral-black/60;
 		}
+	}
+
+	.input-error {
+		@apply border-[#FDA29B] bg-[url(/alert-circle-icon.svg)] bg-[right_16px_center] bg-no-repeat;
 	}
 }
 
