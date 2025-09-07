@@ -23,7 +23,6 @@
 
 		// track current active section and set active nav link
 		ScrollTrigger.create({
-			markers: true,
 			start: 0,
 			end: () => {
 				const doc = document.documentElement;
