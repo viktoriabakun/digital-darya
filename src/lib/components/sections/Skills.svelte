@@ -1,5 +1,7 @@
 <script>
 	import SkillSetFolder from '$lib/components/molecules/SkillSetFolder.svelte';
+	import Experience from '$lib/components/sections/Experience.svelte';
+	import Reviews from '$lib/components/sections/Reviews.svelte';
 
 	const skillSetFolders = [
 		{
@@ -67,4 +69,7 @@
 			{/each}
 		</div>
 	</div>
+
+	<Reviews />
+	<Experience />
 </section>

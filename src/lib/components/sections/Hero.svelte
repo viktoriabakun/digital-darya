@@ -26,7 +26,7 @@
 		<div class="video-gradient"></div>
 		<video
 			bind:this={video}
-			class=" absolute z-0 h-full w-full rounded-[var(--rounded-brand)] object-cover object-top"
+			class="absolute z-0 h-full w-full rounded-[var(--rounded-brand)] object-cover object-top"
 			autoplay
 			loop
 			muted

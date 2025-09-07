@@ -54,7 +54,7 @@
 	}
 </script>
 
-<section id="contacts" class="section-scroll-margin overflow-x-hidden">
+<section id="contact" class="section-scroll-margin overflow-x-hidden">
 	<div
 		class="mt-[100px] -ml-[170px] h-[55px] w-[calc(100%+200px)] bg-[url(/lets-talk-decoration.svg)] bg-size-[auto_55px] lg:h-20 lg:bg-size-[auto_80px]"
 	></div>

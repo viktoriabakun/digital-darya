@@ -24,6 +24,9 @@
 	.max-container {
 		@apply mx-auto w-full max-w-[1288px];
 	}
+	.active-nav-link {
+		@apply !text-white/80 before:!bg-white/80;
+	}
 	.action-link-light {
 		@apply inline-flex text-neutral-black min-w-fit shrink-0 items-center justify-center rounded-full bg-white p-4 transition-colors group-hover:bg-white/60 group-active:bg-white/10 group-active:text-white;
 	}
