@@ -11,12 +11,10 @@
 
 <svelte:window bind:scrollY={scroll} />
 
-<header
-	class="fixed top-[50px] left-0 z-30 flex w-full items-center justify-center px-4 lg:top-[30px]"
->
+<header class="fixed top-[30px] left-0 z-30 flex w-full items-center justify-center px-4">
 	<div
 		class={[
-			'section-container flex items-center justify-between rounded-[var(--rounded-brand)] bg-transparent px-5 py-5 lg:px-9 lg:py-[30px]',
+			'max-container flex items-center justify-between rounded-[var(--rounded-brand)] bg-transparent px-5 py-5 lg:px-9 lg:py-[30px]',
 			'transition-[background-color] duration-600 will-change-[background-color]'
 		]}
 		style:background={scroll < 200
@@ -32,8 +30,8 @@
 		{#if lg.current}
 			<Navigation />
 			<Link href="https://example.com">
-				<span class="action-link px-8">Hire</span>
-				<span class="action-link"><ArrowUpRightIcon /></span>
+				<span class="action-link-light px-8">Hire</span>
+				<span class="action-link-light size-[56px]"><ArrowUpRightIcon /></span>
 			</Link>
 		{:else}
 			<BurgerMenu />

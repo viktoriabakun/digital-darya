@@ -34,7 +34,7 @@
 >
 	<div
 		class={[
-			'bg-brand-blue relative mx-4 mt-[50px] rounded-[var(--rounded-brand)] px-5 pt-24 pb-10'
+			'bg-brand-blue relative mx-4 mt-[30px] rounded-[var(--rounded-brand)] px-5 pt-24 pb-10'
 		]}
 	>
 		<Navigation />

@@ -9,6 +9,7 @@
 	--color-brand-blue-alfa-50: rgba(16, 42, 39, 0.5);
 	--color-brand-brown: #53340c;
 	--color-neutral-black: #020504;
+	--color-neutral-light-black: #2C2C2C;
 
 	--rounded-brand: 20px;
 }
@@ -20,11 +21,17 @@
 }
 
 @layer components {
-	.section-container {
+	.max-container {
 		@apply mx-auto w-full max-w-[1288px];
 	}
-	.action-link {
-		@apply inline-flex size-[52px] min-w-fit shrink-0 items-center justify-center rounded-full bg-white p-4 transition-colors group-hover:bg-white/60 group-active:bg-white/10 group-active:text-white;
+	.active-nav-link {
+		@apply !text-white/80 before:!bg-white/80;
+	}
+	.action-link-light {
+		@apply inline-flex text-neutral-black min-w-fit shrink-0 items-center justify-center rounded-full bg-white p-4 transition-colors group-hover:bg-white/60 group-active:bg-white/10 group-active:text-white;
+	}
+	.action-link-dark {
+		@apply inline-flex text-white min-w-fit shrink-0 items-center justify-center rounded-full bg-neutral-black p-4 transition-colors group-hover:bg-neutral-black/60 group-active:bg-neutral-black/10 group-active:text-neutral-black;
 	}
 	.video-gradient {
 		content: '';
@@ -41,8 +48,25 @@
 	.card {
 		@apply flex w-full flex-col justify-between rounded-3xl p-5 bg-cover bg-center bg-no-repeat;
 	}
+	.form-group{
+		@apply flex flex-col gap-1.5;
+	}
+	.form-label {
+		@apply block text-sm font-medium text-brand-blue leading-5;
+	}
+	.input {
+		@apply py-2.5 px-[14px] w-full bg-white rounded-2xl border text-[#181D27] border-neutral-black/10 shadow-xs shadow-neutral-black/10;
+
+	&::placeholder {
+			@apply text-neutral-black/60;
+		}
+	}
+
+	.input-error {
+		@apply border-[#FDA29B] bg-[url(/alert-circle-icon.svg)] bg-[right_16px_center] bg-no-repeat;
+	}
 }
 
 @utility section-scroll-margin {
-	@apply scroll-mt-[126px] lg:scroll-mt-[142px];
+	@apply scroll-mt-[106px] lg:scroll-mt-[142px];
 }
