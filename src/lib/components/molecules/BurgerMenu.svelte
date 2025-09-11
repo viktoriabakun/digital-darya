@@ -1,12 +1,12 @@
 <script>
-	import { isBurgerMenuOpen as open } from '$lib/stores/burger-menu.svelte';
+	import { getIsBurgerMenuOpen, toggleBurgerMenu } from '$lib/stores/burger-menu.svelte';
 	import { lg } from '$lib/utils/media-query.svelte.js';
 	import Navigation from '$lib/components/molecules/Navigation.svelte';
 	import SocialLinks from '$lib/components/molecules/SocialLinks.svelte';
 	import BurgerButton from '$lib/components/atoms/BurgerButton.svelte';
 
 	$effect(() => {
-		if ($open) {
+		if (getIsBurgerMenuOpen()) {
 			document.body.style.overflow = 'hidden';
 		} else {
 			document.body.style.overflow = '';
@@ -19,7 +19,7 @@
 
 	$effect(() => {
 		if (lg.current) {
-			open.set(false);
+			toggleBurgerMenu();
 		}
 	});
 </script>
@@ -29,7 +29,7 @@
 <div
 	class={[
 		' fixed top-0 right-0 z-10 w-full  overflow-x-hidden backdrop-blur-xs transition-[height] duration-300',
-		$open ? 'h-full' : 'h-0'
+		getIsBurgerMenuOpen() ? 'h-full' : 'h-0'
 	]}
 >
 	<div

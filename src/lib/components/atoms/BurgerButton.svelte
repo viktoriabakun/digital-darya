@@ -1,10 +1,10 @@
 <script>
-	import { toggleBurgerMenu, isBurgerMenuOpen } from '$lib/stores/burger-menu.svelte';
+	import { toggleBurgerMenu, getIsBurgerMenuOpen } from '$lib/stores/burger-menu.svelte';
 </script>
 
 <button
 	onclick={toggleBurgerMenu}
-	class={['burger', { open: $isBurgerMenuOpen }]}
+	class={['burger', { open: getIsBurgerMenuOpen() }]}
 	type="button"
 	aria-label="Toggle navigation menu"
 >
