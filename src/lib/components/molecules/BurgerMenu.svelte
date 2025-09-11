@@ -31,6 +31,7 @@
 		' fixed top-0 right-0 z-10 w-full  overflow-x-hidden backdrop-blur-xs transition-[height] duration-300',
 		getIsBurgerMenuOpen() ? 'h-full' : 'h-0'
 	]}
+	onclick={getIsBurgerMenuOpen() ? toggleBurgerMenu : null}
 >
 	<div
 		class={[
