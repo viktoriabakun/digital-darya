@@ -21,6 +21,9 @@
 		let sections = gsap.utils.toArray("section").filter(s => sectionNames.includes(s.id));
 		let	navLinks = gsap.utils.toArray("nav a");
 
+		let active = sections[0];
+		navLinks[0].classList.toggle("active-nav-link");
+
 		// track current active section and set active nav link
 		ScrollTrigger.create({
 			start: 0,
@@ -31,8 +34,6 @@
 			onUpdate: () => {
 				const scrollY = window.scrollY;
 				const center = scrollY + window.innerHeight / 2;
-
-				let active;
 
 				for (const sec of sections) {
 					const rect = sec.getBoundingClientRect();

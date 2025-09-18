@@ -54,6 +54,7 @@ social media graphics, and corporate presentations.`
 </script>
 
 <section
+	id="experience"
 	class="max-container section-scroll-margin flex flex-col px-4 py-12 lg:pt-0 lg:pb-[112px] xl:px-0"
 >
 	<h2 class="mb-10 text-4xl leading-11 lg:text-7xl lg:leading-[1.25]">Experience</h2>
