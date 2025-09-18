@@ -1,8 +1,9 @@
-import { writable } from 'svelte/store';
+let isBurgerMenuOpen = $state(false);
 
-// TODOL: refactor to runes
-export const isBurgerMenuOpen = writable(false);
+export function getIsBurgerMenuOpen(){
+	return isBurgerMenuOpen;
+}
 
-export function toggleBurgerMenu() {
-	isBurgerMenuOpen.update((value) => !value);
+export function toggleBurgerMenu(){
+	isBurgerMenuOpen = !isBurgerMenuOpen;
 }

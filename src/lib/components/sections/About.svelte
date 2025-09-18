@@ -25,7 +25,7 @@
 					scrollTrigger: {
 						trigger: '#pin-section',
 						start: 'top top',
-						end: '+=150%',
+						end: '+=500%',
 						pin: true,
 						scrub: 0.75
 					}
@@ -39,6 +39,15 @@
 
 		window.addEventListener('resize', () => debouncer.restart(true));
 	});
+
+	function scrollToSection(event, hash) {
+		event.preventDefault();
+
+		gsap.to(window, {
+			duration: 0,
+			scrollTo: hash,
+		});
+	}
 </script>
 
 <section id="about" class="section-scroll-margin max-container px-4 xl:px-0">
@@ -67,7 +76,7 @@
 		<Link
 			class="mb-5 self-start sm:col-span-2 sm:row-span-2 sm:mb-0 md:col-span-1"
 			aria-label="Hire"
-			href="https://example.com"
+			href="https://t.me/i_am_dashaa"
 		>
 			<div class="card group aspect-[calc(518/653)] bg-[url(/about-img-1.webp)] md:max-w-[518px]">
 				<Tag color="neutralLight">Nice to meet you!</Tag>
@@ -79,7 +88,7 @@
 			</div>
 		</Link>
 
-		<a href="#skills" aria-labelledby="skills-link-title">
+		<a href="#skills" onclick={(event) => scrollToSection(event, '#skills')} aria-labelledby="skills-link-title">
 			<div
 				class="card group bg-brand-brown/10 aspect-[calc(365/220)] sm:aspect-[calc(365/316)] lg:max-w-[365px]"
 			>
@@ -93,7 +102,7 @@
 			</div>
 		</a>
 
-		<a href="#works" aria-labelledby="works-link-title">
+		<a href="#works" onclick={(event) => scrollToSection(event, '#works')} aria-labelledby="works-link-title">
 			<div
 				class="card group aspect-[calc(365/220)] bg-[url(/about-img-3.webp)] sm:aspect-[calc(365/316)] lg:max-w-[365px]"
 			>
@@ -107,7 +116,7 @@
 			</div>
 		</a>
 
-		<a href="#experience" aria-labelledby="experience-link-title">
+		<a href="#experience" onclick={(event) => scrollToSection(event, '#experience')} aria-labelledby="experience-link-title">
 			<div
 				class="card group aspect-[calc(365/220)] bg-[url(/about-img-2.webp)] sm:aspect-[calc(365/316)] lg:max-w-[365px]"
 			>
@@ -121,7 +130,7 @@
 			</div>
 		</a>
 
-		<a href="#contact" aria-labelledby="contact-link-title">
+		<a href="#contact" onclick={(event) => scrollToSection(event, '#contact')} aria-labelledby="contact-link-title">
 			<div
 				class="card group bg-brand-blue/10 aspect-[calc(365/220)] sm:aspect-[calc(365/316)] lg:max-w-[365px]"
 			>
