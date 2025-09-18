@@ -83,7 +83,7 @@
 				trigger: container,
 				pin: true,
 				scrub: true,
-				end: `+=${container?.offsetWidth * 7}`,
+				end: `+=${container?.offsetWidth * 6}`,
 				horizontal: false
 			}
 		});

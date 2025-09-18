@@ -1,10 +1,10 @@
 <script>
 	import Text from '$lib/components/atoms/Text.svelte';
 	import BlogPostCard from '$lib/components/organisms/BlogPostCard.svelte';
-	import Link from '$lib/components/atoms/Link.svelte';
 	import ArrowUpRightIcon from '$lib/components/icons/ArrowUpRightIcon.svelte';
 	import { sm, lg } from '$lib/utils/media-query.svelte.js';
 	import { onMount } from 'svelte';
+	import gsap from 'gsap';
 
 	let video;
 
@@ -16,6 +16,15 @@
 			video.play();
 		}
 	});
+
+	function scrollToWorks(event) {
+		event.preventDefault();
+
+		gsap.to(window, {
+			duration: 0,
+			scrollTo: '#works',
+		});
+	}
 </script>
 
 <div class="h-full w-full px-4 pt-[30px]">
@@ -47,10 +56,10 @@
 					Designing digital experiences with care and creativity. <br class="hidden lg:block" /> Proudly
 					crafted to bring ideas to life.
 				</Text>
-				<Link href="https://example.com" class="mt-8">
+				<a onclick={scrollToWorks} href="https://example.com" class="mt-8">
 					<span class="action-link-light px-8 text-nowrap">See works</span>
 					<span class="action-link-light size-[56px]"><ArrowUpRightIcon /></span>
-				</Link>
+				</a>
 			</div>
 			{#if lg.current}
 				<BlogPostCard />
