@@ -46,7 +46,7 @@
 		event.preventDefault();
 
 		gsap.to(window, {
-			duration: 0,
+			duration: 1,
 			scrollTo: hash,
 		});
 	}

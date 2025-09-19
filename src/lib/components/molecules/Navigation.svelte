@@ -77,7 +77,7 @@
 			link.addEventListener("click", (event) => {
 				event.preventDefault();
 				const hash = link.getAttribute("href")!;
-				gsap.to(window, { duration: 0, scrollTo: hash });
+				gsap.to(window, { duration: 1, scrollTo: hash });
 			});
 		});
 
