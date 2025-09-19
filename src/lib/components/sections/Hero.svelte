@@ -27,10 +27,10 @@
 	}
 </script>
 
-<div class="h-full w-full px-4 pt-[30px]">
+<div class="h-screen 2xl:h-full w-full px-4 py-[30px]">
 	<section
 		id="home"
-		class="section-container max-container bg-brand-blue section-scroll-margin relative aspect-[358/760] max-h-[760px] rounded-[var(--rounded-brand)] lg:aspect-[1288/797] lg:max-h-[798px]"
+		class="section-container max-container bg-brand-blue max-h-[760px] lg:max-h-[798px] section-scroll-margin relative aspect-[358/760] rounded-[var(--rounded-brand)] lg:aspect-[1288/798] h-full"
 	>
 		<div class="video-gradient"></div>
 		<video
@@ -56,7 +56,7 @@
 					Designing digital experiences with care and creativity. <br class="hidden lg:block" /> Proudly
 					crafted to bring ideas to life.
 				</Text>
-				<a onclick={scrollToWorks} href="https://example.com" class="mt-8">
+				<a onclick={scrollToWorks} href="https://example.com" class="mt-8 group inline-flex">
 					<span class="action-link-light px-8 text-nowrap">See works</span>
 					<span class="action-link-light size-[56px]"><ArrowUpRightIcon /></span>
 				</a>
