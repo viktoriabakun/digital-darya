@@ -1,7 +1,7 @@
 <script>
-	import Logo from '$lib/components/atoms/Logo.svelte';
 	import SocialLinks from '$lib/components/molecules/SocialLinks.svelte';
 	import Text from '$lib/components/atoms/Text.svelte';
+	import Link from '$lib/components/atoms/Link.svelte';
 </script>
 
 <footer class="bg-neutral-black">
@@ -10,6 +10,10 @@
 	>
 		<Text color="light" weight="semibold">Contact me on my socials:</Text>
 		<SocialLinks />
-		<Text class="text-[#94979C]">Thank you for attention!</Text>
+		<Link class="text-[#94979C] h-11 cursor-pointer relative hover:text-[#9A9AEB] transition-colors duration-1500" href="https://github.com/viktoriabakun" aria-label="Developed by snoopi. Github link">
+				Developed by
+				<img class="size-4.5 ml-3" src="https://github.githubassets.com/images/icons/emoji/octocat.png" alt="">
+				<span class="underline underline-offset-2 ml-1">snoopi</span>
+		</Link>
 	</div>
 </footer>
