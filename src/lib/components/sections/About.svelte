@@ -27,7 +27,7 @@
 						start: 'top top',
 						end: '+=500%',
 						pin: true,
-						scrub: 0.75
+						scrub: 0.75,
 					}
 				})
 				.set(split.chars, { color: 'var(--color-neutral-black)', stagger: 0.1 }, 0.1);

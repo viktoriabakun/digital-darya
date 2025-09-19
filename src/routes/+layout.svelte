@@ -11,6 +11,11 @@
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
 		ScrollTrigger.config({ ignoreMobileResize: true });
+		ScrollTrigger.defaults({ anticipatePin: 1, markers: true });
+
+
+		console.log(ScrollTrigger.defaults());
+		console.log(ScrollTrigger.config());
 	});
 </script>
 
