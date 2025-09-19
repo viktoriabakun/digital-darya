@@ -13,10 +13,6 @@
 		ScrollTrigger.config({ ignoreMobileResize: true });
 		ScrollTrigger.defaults({ anticipatePin: 1 });
 		ScrollTrigger.normalizeScroll(true);
-
-
-		console.log(ScrollTrigger.defaults());
-		console.log(ScrollTrigger.config());
 	});
 </script>
 
