@@ -15,7 +15,7 @@
 
 @layer base {
 	html {
-		@apply font-serif;
+		@apply scroll-smooth font-serif;
 	}
 }
 
