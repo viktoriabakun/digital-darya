@@ -21,7 +21,7 @@
 		event.preventDefault();
 
 		gsap.to(window, {
-			duration: 0,
+			duration: 2,
 			scrollTo: '#works',
 		});
 	}
