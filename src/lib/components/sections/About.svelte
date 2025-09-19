@@ -9,7 +9,9 @@
 	import ArrowUpRightIcon from '$lib/components/icons/ArrowUpRightIcon.svelte';
 	import { onMount } from 'svelte';
 
-	onMount(() => {
+	onMount(async () => {
+		await document.fonts.ready;
+
 		gsap.registerPlugin(ScrollTrigger, SplitText);
 
 		let split, tl;
