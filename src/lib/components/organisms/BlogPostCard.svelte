@@ -2,7 +2,7 @@
 	import Text from '$lib/components/atoms/Text.svelte';
 </script>
 
-<div class="max-w-[379px] overflow-hidden rounded-3xl bg-white p-5">
+<div class="max-w-[379px] hidden lg:block overflow-hidden rounded-3xl bg-white p-5">
 	<img class="h-60 w-full rounded-2xl object-cover" src="/blog-post-img.webp" alt="" />
 	<div class="flex flex-col gap-y-2 pt-5">
 		<Text size="sm" weight="semibold" class="text-brand-blue">Welcome to my Website!</Text>

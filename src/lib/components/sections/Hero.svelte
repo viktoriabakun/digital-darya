@@ -2,10 +2,19 @@
 	import Text from '$lib/components/atoms/Text.svelte';
 	import BlogPostCard from '$lib/components/organisms/BlogPostCard.svelte';
 	import ArrowUpRightIcon from '$lib/components/icons/ArrowUpRightIcon.svelte';
-	import { lg } from '$lib/utils/media-query.svelte.js';
 	import gsap from 'gsap';
 
 	let video: HTMLVideoElement;
+	let showPoster = $state(true);
+
+	async function handleCanPlay() {
+		try {
+			await video.play();
+			showPoster = false;
+		} catch (err) {
+			console.warn('Could not autoplay video', err);
+		}
+	}
 
 	function scrollToWorks(event: MouseEvent) {
 		event.preventDefault();
@@ -22,16 +31,25 @@
 		id="home"
 		class="section-container max-container bg-brand-blue max-h-[760px] lg:max-h-[798px] section-scroll-margin relative aspect-[358/760] rounded-[var(--rounded-brand)] lg:aspect-[1288/798] h-full"
 	>
+			<picture class:opacity={showPoster ? 1 : 0} class="absolute inset-0 transition-opacity z-0">
+				<source srcset="hero-poster-mobile.webp" media="(max-width: 1023px)" />
+				<source srcset="hero-poster-desktop.webp" media="(min-width: 1024px)" />
+				<img
+					alt=""
+					class="h-full w-full object-cover object-top rounded-[var(--rounded-brand)]"
+				/>
+			</picture>
+
 		<div class="video-gradient"></div>
 		<video
 			bind:this={video}
-			oncanplay={() => video.play()}
+			oncanplay={handleCanPlay}
 			class="absolute z-0 h-full w-full rounded-[var(--rounded-brand)] object-cover object-top"
-			poster={lg.current ? 'hero-poster-mobile.webp' : 'hero-poster-desktop.webp'}
 			autoplay
 			loop
 			muted
 			playsinline
+			preload="metadata"
 		>
 			<source src="hero-bg-mobile.mp4" type="video/mp4" media="(max-width: 639px)" />
 			<source src="hero-bg-desktop.mp4" type="video/mp4" />
@@ -53,9 +71,7 @@
 					<span class="action-link-light size-[56px]"><ArrowUpRightIcon /></span>
 				</a>
 			</div>
-			{#if lg.current}
-				<BlogPostCard />
-			{/if}
+			<BlogPostCard />
 		</div>
 	</section>
 </div>

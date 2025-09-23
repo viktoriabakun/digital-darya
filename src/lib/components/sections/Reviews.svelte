@@ -8,9 +8,9 @@
 >
 	<h2 class="text-4xl leading-11 lg:text-7xl lg:leading-[1.25]">Client Thoughts in Action</h2>
 	{#if md.current}
-		<img src="/reviews-desktop.webp" alt="clients reviews" />
+		<img src="/reviews-desktop.webp" loading="lazy" alt="clients reviews" />
 	{:else}
-		<img src="/reviews-mobile.webp" alt="clients reviews" />
+		<img src="/reviews-mobile.webp" loading="lazy" alt="clients reviews" />
 	{/if}
 	<div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-20">
 		<Text size="lg">
