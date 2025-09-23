@@ -56,13 +56,13 @@
 
 <section id="skills" class="section-scroll-margin">
 	<h2
-		class="max-container px-4 py-40 text-5xl leading-[60px] font-medium lg:py-[200px] lg:text-6xl lg:leading-[72px] xl:px-0"
+		class="max-container px-4 py-40 text-5xl leading-[60px] font-medium lg:py-[200px] lg:text-6xl lg:leading-[72px] 2xl:px-0"
 	>
 		Explore my full range of soft and hard skills
 	</h2>
 	<div class="bg-neutral-black">
 		<div
-			class="max-container grid gap-x-10 gap-y-9 px-4 py-12 lg:grid-cols-6 lg:grid-rows-2 lg:py-[112px] xl:px-0"
+			class="max-container grid gap-x-10 gap-y-9 px-4 py-12 lg:grid-cols-6 lg:grid-rows-2 lg:py-[112px] 2xl:px-0"
 		>
 			{#each skillSetFolders as folder, i (folder.title + i)}
 				<SkillSetFolder class={i > 1 ? 'lg:col-span-2' : 'lg:col-span-3'} {...folder} />

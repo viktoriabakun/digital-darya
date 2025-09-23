@@ -52,7 +52,7 @@
 	}
 </script>
 
-<section id="about" class="section-scroll-margin max-container px-4 xl:px-0">
+<section id="about" class="section-scroll-margin max-container px-4 2xl:px-0">
 	<section class="flex flex-col gap-y-10 py-[200px] lg:pr-[72px]">
 		<h2 class="text-4xl leading-11 font-semibold">Welcome to My Digital Playground</h2>
 		<div

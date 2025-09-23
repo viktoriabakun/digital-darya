@@ -59,7 +59,7 @@
 		class="mt-[100px] -ml-[170px] h-[55px] w-[calc(100%+200px)] bg-[url(/lets-talk-decoration.svg)] bg-size-[auto_55px] lg:h-20 lg:bg-size-[auto_80px]"
 	></div>
 
-	<div class="w-full px-4 xl:px-0">
+	<div class="w-full px-4 2xl:px-0">
 				<div class="mx-auto my-[100px] flex w-full max-w-[1216px] flex-col items-center px-4 py-20">
 					<h2 class="text-center text-2xl font-semibold lg:text-4xl">
 						Looking for a design consultation?
@@ -68,7 +68,7 @@
 				</div>
 	</div>
 
-<!--	<div class="w-full px-4 xl:px-0">-->
+<!--	<div class="w-full px-4 2xl:px-0">-->
 <!--		<div-->
 <!--			class="bg-brand-blue/5 mx-auto my-[100px] flex w-full max-w-[1216px] flex-col items-center rounded-2xl px-4 py-16"-->
 <!--		>-->

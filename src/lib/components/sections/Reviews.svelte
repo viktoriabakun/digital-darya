@@ -4,7 +4,7 @@
 </script>
 
 <section
-	class="max-container section-scroll-margin flex flex-col gap-10 px-4 py-[160px] lg:gap-[100px] lg:pt-[112px] lg:pb-[200px] xl:px-0"
+	class="max-container section-scroll-margin flex flex-col gap-10 px-4 py-[160px] lg:gap-[100px] lg:pt-[112px] lg:pb-[200px] 2xl:px-0"
 >
 	<h2 class="text-4xl leading-11 lg:text-7xl lg:leading-[1.25]">Client Thoughts in Action</h2>
 	{#if md.current}
