@@ -44,7 +44,7 @@
 		themeVariants[theme].container
 	]}
 >
-	<img src={imgSrc} alt={title} class="aspect-[342/250] h-full w-full object-cover object-center" />
+	<img src={imgSrc} alt={title} loading="lazy" class="aspect-[342/250] h-full w-full object-cover object-center" />
 
 	<div class="flex flex-col gap-5 p-5 md:p-10 lg:p-[60px]">
 		<Tag class="[@media(height<=670px)]:hidden" color={themeVariants[theme].tag}>{tagText}</Tag>

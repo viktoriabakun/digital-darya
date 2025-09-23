@@ -1,23 +1,13 @@
-<script>
+<script lang="ts">
 	import Text from '$lib/components/atoms/Text.svelte';
 	import BlogPostCard from '$lib/components/organisms/BlogPostCard.svelte';
 	import ArrowUpRightIcon from '$lib/components/icons/ArrowUpRightIcon.svelte';
 	import { sm, lg } from '$lib/utils/media-query.svelte.js';
-	import { onMount } from 'svelte';
 	import gsap from 'gsap';
 
-	let video;
+	let video: HTMLVideoElement;
 
-	onMount(() => {
-		if (video) {
-			const poster = sm.current ? 'hero-poster-desktop.webp' : 'hero-poster-mobile.webp';
-			video.poster = poster;
-
-			video.play();
-		}
-	});
-
-	function scrollToWorks(event) {
+	function scrollToWorks(event: MouseEvent) {
 		event.preventDefault();
 
 		gsap.to(window, {
@@ -35,7 +25,9 @@
 		<div class="video-gradient"></div>
 		<video
 			bind:this={video}
+			oncanplay={() => video.play()}
 			class="absolute z-0 h-full w-full rounded-[var(--rounded-brand)] object-cover object-top"
+			poster={sm.current ? 'hero-poster-mobile.webp' : 'hero-poster-desktop.webp'}
 			autoplay
 			loop
 			muted
