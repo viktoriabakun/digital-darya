@@ -45,6 +45,7 @@
 			bind:this={video}
 			oncanplay={handleCanPlay}
 			class="absolute z-0 h-full w-full rounded-[var(--rounded-brand)] object-cover object-top"
+			poster={lg.current ? 'hero-poster-mobile.webp' : 'hero-poster-desktop.webp'}
 			autoplay
 			loop
 			muted
