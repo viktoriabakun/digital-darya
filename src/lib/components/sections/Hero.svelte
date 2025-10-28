@@ -21,24 +21,21 @@
 
 		gsap.to(window, {
 			duration: 2,
-			scrollTo: '#works',
+			scrollTo: '#works'
 		});
 	}
 </script>
 
-<div class="h-screen 2xl:h-full w-full px-4 py-[30px]">
+<div class="h-full w-full px-4 py-[30px]">
 	<section
 		id="home"
-		class="section-container max-container bg-brand-blue max-h-[760px] lg:max-h-[798px] section-scroll-margin relative aspect-[358/760] rounded-[var(--rounded-brand)] lg:aspect-[1288/798] h-full"
+		class="section-container max-container bg-brand-blue section-scroll-margin relative aspect-[358/760] h-full max-h-[760px] rounded-[var(--rounded-brand)] lg:max-h-[798px]"
 	>
-			<picture class:opacity={showPoster ? 1 : 0} class="absolute inset-0 transition-opacity z-0">
-				<source srcset="hero-poster-mobile.webp" media="(max-width: 1023px)" />
-				<source srcset="hero-poster-desktop.webp" media="(min-width: 1024px)" />
-				<img
-					alt=""
-					class="h-full w-full object-cover object-top rounded-[var(--rounded-brand)]"
-				/>
-			</picture>
+		<picture class:opacity={showPoster ? 1 : 0} class="absolute inset-0 z-0 transition-opacity">
+			<source srcset="hero-poster-mobile.webp" media="(max-width: 1023px)" />
+			<source srcset="hero-poster-desktop.webp" media="(min-width: 1024px)" />
+			<img alt="" class="h-full w-full rounded-[var(--rounded-brand)] object-cover object-top" />
+		</picture>
 
 		<div class="video-gradient"></div>
 		<video
@@ -66,7 +63,7 @@
 					Designing digital experiences with care and creativity. <br class="hidden lg:block" /> Proudly
 					crafted to bring ideas to life.
 				</Text>
-				<a onclick={scrollToWorks} href="https://example.com" class="mt-8 group inline-flex">
+				<a onclick={scrollToWorks} href="https://example.com" class="group mt-8 inline-flex">
 					<span class="action-link-light px-8 text-nowrap">See works</span>
 					<span class="action-link-light size-[56px]"><ArrowUpRightIcon /></span>
 				</a>
